@@ -138,7 +138,8 @@ return {
         "typescript",
         "vim",
         "yaml",
-        "rust"
+        "rust",
+        "ron",
       },
     },
   },

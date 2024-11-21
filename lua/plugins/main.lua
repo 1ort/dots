@@ -1,12 +1,21 @@
 return {
-  { "navarasu/onedark.nvim" },
+  {
+    "navarasu/onedark.nvim",
+    opts = {
+      transparent = true,
+      styles = {
+        sidebars = "transparent",
+        floats = "transparent",
+      },
+    },
+  },
+
   {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "onedark",
     },
   },
-  -- change trouble config
   {
     "folke/trouble.nvim",
     -- opts will be merged with the parent spec
@@ -42,19 +51,6 @@ return {
         layout_config = { prompt_position = "top" },
         sorting_strategy = "ascending",
         winblend = 0,
-      },
-    },
-  },
-
-  -- add pyright to lspconfig
-  {
-    "neovim/nvim-lspconfig",
-    ---@class PluginLspOpts
-    opts = {
-      ---@type lspconfig.options
-      servers = {
-        -- pyright will be automatically installed with mason and loaded with lspconfig
-        pyright = {},
       },
     },
   },
@@ -154,5 +150,11 @@ return {
         position = "right",
       },
     },
+  },
+  {
+    "folke/noice.nvim",
+    opts = function(_, opts)
+      opts.presets.lsp_doc_border = true
+    end,
   },
 }

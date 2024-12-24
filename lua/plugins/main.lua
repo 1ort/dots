@@ -9,10 +9,25 @@ return {
     opts = {
       servers = {
         rust_analyzer = {},
+        ruff = {},
+        pyright = {
+          -- Using Ruff's import organizer
+          disableOrganizeImports = true,
+          analysis = {
+            -- Ignore all files for analysis to exclusively use Ruff for linting
+            ignore = { "*" },
+          },
+        },
       },
       setup = {
         rust_analyzer = function(_, opts) -- do not setup twice with mason
           return true
+        end,
+        ruff = function()
+          LazyVim.lsp.on_attach(function(client, _)
+            -- Disable hover in favor of Pyright
+            client.server_capabilities.hoverProvider = false
+          end, ruff)
         end,
       },
     },

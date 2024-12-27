@@ -21,6 +21,18 @@ return {
       window = {
         position = "right",
       },
+      filesystem = {
+        filtered_items = {
+          visible = false,
+          gide_gitignored = true,
+          hide_dotfiles = false,
+          hide_by_name = {
+            ".github",
+            ".gitignore",
+          },
+          never_show = { ".git" },
+        },
+      },
     },
   },
   {

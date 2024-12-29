@@ -1,16 +1,21 @@
 [user]
 	name = 1ort
 	email = 83316072+1ort@users.noreply.github.com
+
 [core]
 	editor = nvim
   pager = delta
 
 [interactive]
-  diffFilter = delta --color-only
+  diffFilter = delta
 
 [delta]
-  navigate = true  # use n and N to move between diff sections
-  dark = true      # or light = true, or omit for auto-detection
+  navigate = true
+  line-numbers = true
+  side-by-side = true
+  minus-style = syntax "#450a15"
+  plus-style = syntax "#0b4820"
+  minus-emph-style = syntax "#600818"
+  plus-emph-style = syntax "#175c2e"
+  syntax-theme = DarkNeon
 
-[merge]
-  conflictstyle = zdiff3

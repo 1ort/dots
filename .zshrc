@@ -59,3 +59,4 @@ source ~/.p10k.zsh
 export BUN_INSTALL="$HOME/.local/share/reflex/bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$PATH:/usr/local/go/bin"
+export PATH="$PATH:/snap/bin"

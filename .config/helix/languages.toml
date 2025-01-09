@@ -1,0 +1,12 @@
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
+[[language]]
+name = "python"
+scope = "source.python"
+injection-regex = "python"
+file-types = ["py"]
+indent = { tab-width = 4, unit = "    " }
+language-servers = [ "ruff", "pylsp" ]
+formatter = { command = "ruff" , args = ["format", "stdin-filename", "_"] }

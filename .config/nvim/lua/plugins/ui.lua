@@ -24,7 +24,7 @@ return {
       filesystem = {
         filtered_items = {
           visible = false,
-          gide_gitignored = true,
+          hide_gitignored = true,
           hide_dotfiles = false,
           hide_by_name = {
             ".github",

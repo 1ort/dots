@@ -46,9 +46,11 @@ plugins=(
 ZSH_AUTOSUGGEST_STRATEGY=(completion match_prev_cmd)
 
 #source all autocompletion files
-for file in $HOME/.zsh_autocomplete/*.zsh; do
-    source "$file"
-done
+if [[ -d $HOME/.zsh_autocomplete ]]; then
+  source "$file"
+    for file in $HOME/.zsh_autocomplete/*.zsh; do
+  done
+fi
 
 source $ZSH/oh-my-zsh.sh
 source ~/.p10k.zsh

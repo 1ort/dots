@@ -1,6 +1,5 @@
-[user]
-	name = 1ort
-	email = 83316072+1ort@users.noreply.github.com
+[include]
+  path = ~/.gitconfig_user
 
 [core]
 	editor = nvim

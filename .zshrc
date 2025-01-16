@@ -47,9 +47,9 @@ ZSH_AUTOSUGGEST_STRATEGY=(completion match_prev_cmd)
 
 #source all autocompletion files
 if [[ -d $HOME/.zsh_autocomplete ]]; then
-  source "$file"
     for file in $HOME/.zsh_autocomplete/*.zsh; do
-  done
+      source "$file"
+    done
 fi
 
 source $ZSH/oh-my-zsh.sh

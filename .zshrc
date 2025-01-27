@@ -54,11 +54,3 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 source ~/.p10k.zsh
-
-# bun completions
-[ -s "$HOME/.local/share/reflex/bun/_bun" ] && source "$HOME/.local/share/reflex/bun/_bun"
-# bun
-export BUN_INSTALL="$HOME/.local/share/reflex/bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-export PATH="$PATH:/usr/local/go/bin"
-export PATH="$PATH:/snap/bin"

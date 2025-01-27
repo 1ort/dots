@@ -3,7 +3,7 @@
 -- Add any additional autocmds here
 -- Disable autoformat for toml files
 vim.api.nvim_create_autocmd({ "FileType" }, {
-  pattern = { "toml" },
+  pattern = { "toml", "python" },
   callback = function()
     vim.b.autoformat = false
   end,

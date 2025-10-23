@@ -6,6 +6,10 @@ fi
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$HOME/.local/bin:$PATH"
 
+# Path to nvim installation
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+
+
 autoload -U +X compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 
